@@ -1,19 +1,29 @@
-# timeisnow
+# Clojure backend example
 
-FIXME
+Backend for Ilja's front-end project.
 
-## Prerequisites
+####### Inspired from
+https://github.com/ilja903/simple-frontend-boilerplate
+https://github.com/ilja903/java-backend-boilerplate
 
-You will need [Leiningen][] 2.0.0 or above installed.
+####### To run
+* 1) You need to have both Ilja's projects (ref: inspired from), leiningen and PostGresDb
+* 2) Fill the database by running "mvn clean install flyway:clean flyway:migrate"
+* 3) Navigate cmd to this folder and run "lein ring server 4567"
+* 4) Open front-end project's index.html in IDE
+* 5) POST method doesn't work*
 
-[leiningen]: https://github.com/technomancy/leiningen
+* if you simulate post request, it works. Dunno why:/
 
-## Running
 
-To start a web server for the application, run:
+####### My experience with Clojure in backend
 
-    lein ring server
+* Clojure rocks, but plugins suck.
+For database integration I've used YESQL, which is a by far best db integration plugin, based on brilliant idea and very easy, but runs on jdbc2.
+Which means a bunch of extra problems with getting and inserting data. To insert a date, I must use sql Date. Etc...
 
-## License
+* IDE sucks. Java tools are many times superior. IDE's must improve!
 
-Copyright © 2015 FIXME
+* Debugging? None. Do I need to add (do (println myvariable) ... everywhere once I run into trouble.
+
+* Sign up for clojure now!
