@@ -3,8 +3,8 @@
 Backend for Ilja's front-end project.
 
 ####### Inspired from
-https://github.com/ilja903/simple-frontend-boilerplate
-https://github.com/ilja903/java-backend-boilerplate
+* https://github.com/ilja903/simple-frontend-boilerplate
+* https://github.com/ilja903/java-backend-boilerplate
 
 ####### To run
 * 1) You need to have both Ilja's projects (ref: inspired from), leiningen and PostGresDb
