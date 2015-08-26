@@ -8,16 +8,15 @@
             [timeisnow.people-service :as service]
             ))
 
-(defn allow-origin [body]
+(defn json-type [body]
   {:status  200
-   :headers {
-             "Content-Type"                "application/json"}
+   :headers {"Content-Type"                "application/json"}
 
    :body    (str body)})
 
 (defroutes app-routes
-           (GET "/users" [] (allow-origin (service/select-all-people)))
-           (POST "/user" {body :body} (allow-origin (service/insert-person! (slurp body))))
+           (GET "/users" [] (json-type (service/select-all-people)))
+           (POST "/user" {body :body} (json-type (service/insert-person! (slurp body))))
            (route/not-found "Not Found"))
 
 (def app
